@@ -1,0 +1,8 @@
+C:\Users\Lucas\Documents\Visual Studio 2015\Projects\CriaTabelaCampeonato\CriaTabelaCampeonato\bin\Debug\CriaTabelaCampeonato.exe.config
+C:\Users\Lucas\Documents\Visual Studio 2015\Projects\CriaTabelaCampeonato\CriaTabelaCampeonato\bin\Debug\CriaTabelaCampeonato.exe
+C:\Users\Lucas\Documents\Visual Studio 2015\Projects\CriaTabelaCampeonato\CriaTabelaCampeonato\bin\Debug\CriaTabelaCampeonato.pdb
+C:\Users\Lucas\Documents\Visual Studio 2015\Projects\CriaTabelaCampeonato\CriaTabelaCampeonato\obj\Debug\CriaTabelaCampeonato.frmCriaTabela.resources
+C:\Users\Lucas\Documents\Visual Studio 2015\Projects\CriaTabelaCampeonato\CriaTabelaCampeonato\obj\Debug\CriaTabelaCampeonato.Properties.Resources.resources
+C:\Users\Lucas\Documents\Visual Studio 2015\Projects\CriaTabelaCampeonato\CriaTabelaCampeonato\obj\Debug\CriaTabelaCampeonato.csproj.GenerateResource.Cache
+C:\Users\Lucas\Documents\Visual Studio 2015\Projects\CriaTabelaCampeonato\CriaTabelaCampeonato\obj\Debug\CriaTabelaCampeonato.exe
+C:\Users\Lucas\Documents\Visual Studio 2015\Projects\CriaTabelaCampeonato\CriaTabelaCampeonato\obj\Debug\CriaTabelaCampeonato.pdb

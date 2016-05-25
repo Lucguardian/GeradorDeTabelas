@@ -65,18 +65,18 @@ namespace CriaTabelaCampeonato
             InitializeComponent();
         }
 
-        int cont = 0;
-        string[] jog, pers;
-        string listJog, listPers;
-        int njs, nps, nrs;        
+        int cont1 = 0, cont2 = 0; //contadores globais do form 1
+        string[] jog, pers; //declaração dos vetores que receberão os nomes de jogadores e personagens
+        string listJog, listPers; //string que 'empilha' os nomes para visualização nos labels
+        int njs, nps; //variáveis que recebem o número de jogadores e personagens
 
-        private void txtNumJog_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNumJog_KeyPress(object sender, KeyPressEventArgs e) //Número de jogadores - qdo se pressiona uma tecla no text box
         {
-            e.KeyChar = Validacao.consistNumNat(e.KeyChar);
-            if (e.KeyChar == (char)13)
+            e.KeyChar = Validacao.consistNumNat(e.KeyChar); //a tecla pressionada é 'substituída' pelo valor que o método de validação retorna
+            if (e.KeyChar == (char)13) //quando 'enter' é pressionado
             {
-                njs = int.Parse(txtNumJog.Text);
-                jog = new string[njs];
+                njs = int.Parse(txtNumJog.Text); //variável recebe o retorno do método de int que analisa o texto contendo o número de jogadores - todo text box é uma string
+                jog = new string[njs]; //instancia o vetor de string que recebe o nome do jogador com o id do contador de acordo com o número de jogadores
                 txtNumJog.Enabled = false;
                 lblNomeJog.Visible = true;
                 txtNomeJog.Visible = true;
@@ -84,28 +84,28 @@ namespace CriaTabelaCampeonato
             }
         }
 
-        private void txtNomeJog_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNomeJog_KeyPress(object sender, KeyPressEventArgs e) //Nome dos jogadores
         {
             e.KeyChar = Validacao.consistText(e.KeyChar);
             if (e.KeyChar == (char)13 && txtNomeJog.Text != "")
             {
-                jog[cont] = txtNomeJog.Text;
-                listJog = listJog + "\n" + txtNomeJog.Text;
-                lblListJog.Text = listJog;
-                txtNomeJog.Text = "";
-                cont++;
-                if (cont > (njs - 1))
+                jog[cont1] = txtNomeJog.Text; //atribui o nome do jogador ao vetor de acordo com o contador
+                listJog = listJog + "\n" + txtNomeJog.Text; //a string recebe ela mesma, quebra de página e o conteúdo do txt box para montar a lista de jogadores
+                lblListJog.Text = listJog; //exibe no label respectivo
+                txtNomeJog.Text = ""; //esvazia text box
+                cont1++; //acrescenta 1 ao contador
+                if (cont1 > (njs - 1))//verifica se o contador ultrapassou o número de jogadores para partir para o próximo campo
                 {
                     txtNomeJog.Enabled = false;
                     lblNumPers.Visible = true;
                     txtNumPers.Visible = true;
                     txtNumPers.Focus();
-                    cont = 0;
+                    cont1 = 0;
                 }
             }
         }
 
-        private void txtNumPers_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNumPers_KeyPress(object sender, KeyPressEventArgs e) //Número de personagens
         {
             e.KeyChar = Validacao.consistNumNat(e.KeyChar);
             if (e.KeyChar == (char)13)
@@ -115,26 +115,35 @@ namespace CriaTabelaCampeonato
                 txtNumPers.Enabled = false;
                 lblNomePers.Visible = true;
                 txtNomePers.Visible = true;
+                lblVarJog.Visible = true;
                 txtNomePers.Focus();
+                lblVarJog.Text = jog[cont1];
             }
         }
 
-        private void txtNomePers_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNomePers_KeyPress(object sender, KeyPressEventArgs e) //Nome dos personagens
         {
             e.KeyChar = Validacao.consistText(e.KeyChar);
             if (e.KeyChar == (char)13 && txtNomePers.Text != "")
-            {
-                pers[cont] = txtNomePers.Text;
+            {                
+                pers[cont2] = txtNomePers.Text;
                 listPers = listPers + "\n" + txtNomePers.Text;
                 lblListPers.Text = listPers;
                 txtNomePers.Text = "";
-                cont++;
-                if (cont > (nps - 1))
+                cont2++;
+                cont1++;                
+                if (cont2 > (nps - 1))
                 {
                     txtNomePers.Enabled = false;
-                    
-                    cont = 0;
+                    cont2 = 0;
+                    frmTabela tabela = new frmTabela(jog, pers);
+                    tabela.Show();
                 }
+                if (cont1 > (njs - 1))
+                {
+                    cont1 = 0;
+                }
+                lblVarJog.Text = jog[cont1];
             }
         }
     }

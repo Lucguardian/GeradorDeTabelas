@@ -41,6 +41,7 @@
             this.txtNomePers = new System.Windows.Forms.TextBox();
             this.gbPers = new System.Windows.Forms.GroupBox();
             this.lblListPers = new System.Windows.Forms.Label();
+            this.lblVarJog = new System.Windows.Forms.Label();
             this.gbJog.SuspendLayout();
             this.gbPers.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +57,7 @@
             // 
             // txtNumJog
             // 
-            this.txtNumJog.Location = new System.Drawing.Point(291, 24);
+            this.txtNumJog.Location = new System.Drawing.Point(394, 24);
             this.txtNumJog.Name = "txtNumJog";
             this.txtNumJog.Size = new System.Drawing.Size(37, 20);
             this.txtNumJog.TabIndex = 1;
@@ -76,18 +77,20 @@
             // 
             this.txtNomeJog.Location = new System.Drawing.Point(203, 72);
             this.txtNomeJog.Name = "txtNomeJog";
-            this.txtNomeJog.Size = new System.Drawing.Size(125, 20);
+            this.txtNomeJog.Size = new System.Drawing.Size(228, 20);
             this.txtNomeJog.TabIndex = 3;
             this.txtNomeJog.Visible = false;
             this.txtNomeJog.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomeJog_KeyPress);
             // 
             // gbJog
             // 
+            this.gbJog.AutoSize = true;
             this.gbJog.BackColor = System.Drawing.Color.Transparent;
             this.gbJog.Controls.Add(this.lblListJog);
-            this.gbJog.Location = new System.Drawing.Point(356, 24);
+            this.gbJog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbJog.Location = new System.Drawing.Point(451, 24);
             this.gbJog.Name = "gbJog";
-            this.gbJog.Size = new System.Drawing.Size(143, 179);
+            this.gbJog.Size = new System.Drawing.Size(143, 192);
             this.gbJog.TabIndex = 4;
             this.gbJog.TabStop = false;
             this.gbJog.Text = "Jogadores";
@@ -111,7 +114,7 @@
             // 
             // txtNumPers
             // 
-            this.txtNumPers.Location = new System.Drawing.Point(291, 120);
+            this.txtNumPers.Location = new System.Drawing.Point(394, 120);
             this.txtNumPers.Name = "txtNumPers";
             this.txtNumPers.Size = new System.Drawing.Size(37, 20);
             this.txtNumPers.TabIndex = 6;
@@ -123,27 +126,29 @@
             this.lblNomePers.AutoSize = true;
             this.lblNomePers.Location = new System.Drawing.Point(38, 168);
             this.lblNomePers.Name = "lblNomePers";
-            this.lblNomePers.Size = new System.Drawing.Size(159, 13);
+            this.lblNomePers.Size = new System.Drawing.Size(163, 13);
             this.lblNomePers.TabIndex = 7;
-            this.lblNomePers.Text = "Digite o nome dos personagens:";
+            this.lblNomePers.Text = "Digite o nome do personagem do";
             this.lblNomePers.Visible = false;
             // 
             // txtNomePers
             // 
-            this.txtNomePers.Location = new System.Drawing.Point(203, 168);
+            this.txtNomePers.Location = new System.Drawing.Point(281, 168);
             this.txtNomePers.Name = "txtNomePers";
-            this.txtNomePers.Size = new System.Drawing.Size(125, 20);
+            this.txtNomePers.Size = new System.Drawing.Size(150, 20);
             this.txtNomePers.TabIndex = 8;
             this.txtNomePers.Visible = false;
             this.txtNomePers.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomePers_KeyPress);
             // 
             // gbPers
             // 
+            this.gbPers.AutoSize = true;
             this.gbPers.BackColor = System.Drawing.Color.Transparent;
             this.gbPers.Controls.Add(this.lblListPers);
-            this.gbPers.Location = new System.Drawing.Point(530, 24);
+            this.gbPers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPers.Location = new System.Drawing.Point(625, 24);
             this.gbPers.Name = "gbPers";
-            this.gbPers.Size = new System.Drawing.Size(150, 179);
+            this.gbPers.Size = new System.Drawing.Size(150, 192);
             this.gbPers.TabIndex = 9;
             this.gbPers.TabStop = false;
             this.gbPers.Text = "Personagens";
@@ -155,12 +160,23 @@
             this.lblListPers.Size = new System.Drawing.Size(117, 160);
             this.lblListPers.TabIndex = 0;
             // 
+            // lblVarJog
+            // 
+            this.lblVarJog.AutoSize = true;
+            this.lblVarJog.Location = new System.Drawing.Point(200, 168);
+            this.lblVarJog.Name = "lblVarJog";
+            this.lblVarJog.Size = new System.Drawing.Size(45, 13);
+            this.lblVarJog.TabIndex = 10;
+            this.lblVarJog.Text = "jogador:";
+            this.lblVarJog.Visible = false;
+            // 
             // frmCriaTabela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(798, 537);
+            this.Controls.Add(this.lblVarJog);
             this.Controls.Add(this.gbPers);
             this.Controls.Add(this.txtNomePers);
             this.Controls.Add(this.lblNomePers);
@@ -195,6 +211,7 @@
         private System.Windows.Forms.TextBox txtNomePers;
         private System.Windows.Forms.GroupBox gbPers;
         private System.Windows.Forms.Label lblListPers;
+        private System.Windows.Forms.Label lblVarJog;
     }
 }
 

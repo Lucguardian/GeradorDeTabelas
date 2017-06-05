@@ -90,7 +90,7 @@
             this.gbJog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbJog.Location = new System.Drawing.Point(451, 24);
             this.gbJog.Name = "gbJog";
-            this.gbJog.Size = new System.Drawing.Size(143, 192);
+            this.gbJog.Size = new System.Drawing.Size(143, 379);
             this.gbJog.TabIndex = 4;
             this.gbJog.TabStop = false;
             this.gbJog.Text = "Jogadores";
@@ -99,13 +99,13 @@
             // 
             this.lblListJog.Location = new System.Drawing.Point(22, 16);
             this.lblListJog.Name = "lblListJog";
-            this.lblListJog.Size = new System.Drawing.Size(100, 160);
+            this.lblListJog.Size = new System.Drawing.Size(100, 346);
             this.lblListJog.TabIndex = 0;
             // 
             // lblNumPers
             // 
             this.lblNumPers.AutoSize = true;
-            this.lblNumPers.Location = new System.Drawing.Point(35, 120);
+            this.lblNumPers.Location = new System.Drawing.Point(32, 120);
             this.lblNumPers.Name = "lblNumPers";
             this.lblNumPers.Size = new System.Drawing.Size(163, 13);
             this.lblNumPers.TabIndex = 5;
@@ -124,7 +124,7 @@
             // lblNomePers
             // 
             this.lblNomePers.AutoSize = true;
-            this.lblNomePers.Location = new System.Drawing.Point(38, 168);
+            this.lblNomePers.Location = new System.Drawing.Point(32, 168);
             this.lblNomePers.Name = "lblNomePers";
             this.lblNomePers.Size = new System.Drawing.Size(163, 13);
             this.lblNomePers.TabIndex = 7;
@@ -148,7 +148,7 @@
             this.gbPers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbPers.Location = new System.Drawing.Point(625, 24);
             this.gbPers.Name = "gbPers";
-            this.gbPers.Size = new System.Drawing.Size(150, 192);
+            this.gbPers.Size = new System.Drawing.Size(150, 379);
             this.gbPers.TabIndex = 9;
             this.gbPers.TabStop = false;
             this.gbPers.Text = "Personagens";
@@ -157,13 +157,13 @@
             // 
             this.lblListPers.Location = new System.Drawing.Point(18, 16);
             this.lblListPers.Name = "lblListPers";
-            this.lblListPers.Size = new System.Drawing.Size(117, 160);
+            this.lblListPers.Size = new System.Drawing.Size(117, 346);
             this.lblListPers.TabIndex = 0;
             // 
             // lblVarJog
             // 
             this.lblVarJog.AutoSize = true;
-            this.lblVarJog.Location = new System.Drawing.Point(200, 168);
+            this.lblVarJog.Location = new System.Drawing.Point(191, 168);
             this.lblVarJog.Name = "lblVarJog";
             this.lblVarJog.Size = new System.Drawing.Size(45, 13);
             this.lblVarJog.TabIndex = 10;

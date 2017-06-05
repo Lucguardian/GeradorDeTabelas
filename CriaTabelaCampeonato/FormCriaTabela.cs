@@ -110,14 +110,22 @@ namespace CriaTabelaCampeonato
             e.KeyChar = Validacao.consistNumNat(e.KeyChar);
             if (e.KeyChar == (char)13)
             {
-                nps = int.Parse(txtNumPers.Text);
-                pers = new string[nps];
-                txtNumPers.Enabled = false;
-                lblNomePers.Visible = true;
-                txtNomePers.Visible = true;
-                lblVarJog.Visible = true;
-                txtNomePers.Focus();
-                lblVarJog.Text = jog[cont1];
+                int verif = int.Parse(txtNumPers.Text);
+                if ((verif%2) == 0 && verif > 3) //Verifica se o número de personagens é par e maior do que 3
+                {
+                    nps = int.Parse(txtNumPers.Text);
+                    pers = new string[nps];
+                    txtNumPers.Enabled = false;
+                    lblNomePers.Visible = true;
+                    txtNomePers.Visible = true;
+                    lblVarJog.Visible = true;
+                    txtNomePers.Focus();
+                    lblVarJog.Text = jog[cont1] + ":";//label com o nome do jogador que escolhe personagem
+                }
+                else
+                {
+                    MessageBox.Show("O número deve ser par e maior do que 3.");
+                }                
             }
         }
 
@@ -136,7 +144,7 @@ namespace CriaTabelaCampeonato
                 {
                     txtNomePers.Enabled = false;
                     cont2 = 0;
-                    frmTabela tabela = new frmTabela(jog, pers);
+                    frmTabela tabela = new frmTabela(jog, pers);//Passa os vetores com nomes de jogadores e personagens para o form de tabela
                     tabela.Show();
                 }
                 if (cont1 > (njs - 1))
